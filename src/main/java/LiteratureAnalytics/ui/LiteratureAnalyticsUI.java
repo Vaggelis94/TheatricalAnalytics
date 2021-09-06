@@ -3940,12 +3940,14 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
     public ArrayList<String> CleanPlays(ArrayList<String> list) {
 
         for (int i = 0; i < list.size(); i++) {
-            if (!list.get(i).contains("House") && !list.get(i).contains("Earnesr") && !list.get(i).contains("Pygmalion")
+            /*
+            if (!list.get(i).contains("House") && !list.get(i).contains("Earnest") && !list.get(i).contains("Pygmalion")
                     && !list.get(i).contains("Hamlet") && !list.get(i).contains("Rossum") && !list.get(i).contains("Ideal Husband")
                     && !list.get(i).contains("Post Office") && !list.get(i).contains("Midsummer")
                     && !list.get(i).contains("Work and Play") && !list.get(i).contains("PlayBoy")) {
                 list.remove(list.get(i));
             }
+            */
             
             if (list.get(i).equals("The Complete Works of William Shakespeare")) {
                 list.remove(list.get(i));
