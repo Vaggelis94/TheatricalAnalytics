@@ -1,0 +1,211 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 1073741824 bytes for Failed to commit area from 0x00000000c0000000 to 0x0000000100000000 of length 1073741824.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/os/windows/os_windows.cpp:3271), pid=8040, tid=8080
+#
+# JRE version:  (11.0.7+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.7+8-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 -Xmx1024M -Xms1024M -Dclassworlds.conf=C:\Program Files\NetBeans-11.3\netbeans\java\maven\bin\m2.conf -Dmaven.home=C:\Program Files\NetBeans-11.3\netbeans\java\maven -Dmaven.multiModuleProjectDirectory=C:\Users\Vaggelis\Documents\NetBeansProjects\LiteratureAnalyticsThesis org.codehaus.plexus.classworlds.launcher.Launcher -Dexec.args=-classpath %classpath LiteratureAnalytics.ui.LiteratureAnalyticsUI -Dexec.executable=C:\Program Files\Java\jdk-11.0.7\bin\java.exe -Dmaven.ext.class.path=C:\Program Files\NetBeans-11.3\netbeans\java\maven-nblib\netbeans-eventspy.jar process-classes org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
+
+Host: Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz, 4 cores, 3G,  Windows 7 , 64 bit Build 7601 (6.1.7601.24545)
+Time: Sun Aug  9 04:15:20 2020 Eanei? ?na GTB elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000001f7800):  JavaThread "Unknown thread" [_thread_in_vm, id=8080, stack(0x00000000020c0000,0x00000000021c0000)]
+
+Stack: [0x00000000020c0000,0x00000000021c0000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x661a7a]
+V  [jvm.dll+0x7a1b2f]
+V  [jvm.dll+0x7a31d5]
+V  [jvm.dll+0x7a3843]
+V  [jvm.dll+0x25f1a8]
+V  [jvm.dll+0x65ee8a]
+V  [jvm.dll+0x653865]
+V  [jvm.dll+0x316adc]
+V  [jvm.dll+0x316962]
+V  [jvm.dll+0x31c1d6]
+V  [jvm.dll+0x3688af]
+V  [jvm.dll+0x3682d0]
+V  [jvm.dll+0x2f3888]
+V  [jvm.dll+0x2f49e6]
+V  [jvm.dll+0x77ac57]
+V  [jvm.dll+0x77c52f]
+V  [jvm.dll+0x3755a9]
+V  [jvm.dll+0x75fe6e]
+V  [jvm.dll+0x3e5b7d]
+V  [jvm.dll+0x3e8091]
+C  [java.exe+0x3607]
+C  [java.exe+0x178dc]
+C  [kernel32.dll+0x1556d]
+C  [ntdll.dll+0x5372d]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000000001cf5b0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000000000020c800 GCTaskThread "GC Thread#0" [stack: 0x0000000019b70000,0x0000000019c70000] [id=5020]
+  0x000000000022b000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000001c8a0000,0x000000001c9a0000] [id=4816]
+  0x000000000022e000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000001c760000,0x000000001c860000] [id=6760]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000007fec6be2047]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000000001f4c90] Heap_lock - owner thread: 0x00000000001f7800
+
+Heap address: 0x00000000c0000000, size: 1024 MB, Compressed Oops mode: Non-zero based: 0x00000000c0000000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x000000013f510000 - 0x000000013f557000 	C:\Program Files\Java\jdk-11.0.7\bin\java.exe
+0x0000000077110000 - 0x00000000772af000 	C:\Windows\SYSTEM32\ntdll.dll
+0x000007fef4080000 - 0x000007fef4093000 	C:\Program Files\AVAST Software\Avast\aswhook.dll
+0x0000000076ff0000 - 0x000000007710f000 	C:\Windows\system32\kernel32.dll
+0x000007fefcc90000 - 0x000007fefccf7000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefd020000 - 0x000007fefd0fb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefd590000 - 0x000007fefd62f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefdda0000 - 0x000007fefddbf000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefe2d0000 - 0x000007fefe3fc000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076ef0000 - 0x0000000076feb000 	C:\Windows\system32\USER32.dll
+0x000007fefe260000 - 0x000007fefe2c7000 	C:\Windows\system32\GDI32.dll
+0x000007fefe400000 - 0x000007fefe40e000 	C:\Windows\system32\LPK.dll
+0x000007fefe190000 - 0x000007fefe25b000 	C:\Windows\system32\USP10.dll
+0x000007fefb2a0000 - 0x000007fefb495000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_e372d88f30fbb845\COMCTL32.dll
+0x000007fefdae0000 - 0x000007fefdb51000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefbcf0000 - 0x000007fefbcfc000 	C:\Windows\system32\VERSION.dll
+0x000007fefd270000 - 0x000007fefd29e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefd160000 - 0x000007fefd26b000 	C:\Windows\system32\MSCTF.dll
+0x000007fef3350000 - 0x000007fef3353000 	C:\Windows\system32\api-ms-win-core-synch-l1-2-0.DLL
+0x000007feef750000 - 0x000007feef766000 	C:\Program Files\Java\jdk-11.0.7\bin\vcruntime140.dll
+0x000007fefb270000 - 0x000007fefb274000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-runtime-l1-1-0.dll
+0x000007feda4e0000 - 0x000007feda5d6000 	C:\Program Files\Java\jdk-11.0.7\bin\ucrtbase.DLL
+0x000007fef0480000 - 0x000007fef0483000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-core-localization-l1-2-0.dll
+0x000007fef57f0000 - 0x000007fef57f3000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-core-processthreads-l1-1-1.dll
+0x000007feef780000 - 0x000007feef783000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-core-file-l1-2-0.dll
+0x000007feef770000 - 0x000007feef773000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-core-timezone-l1-1-0.dll
+0x000007feec220000 - 0x000007feec223000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-core-file-l2-1-0.dll
+0x000007feeefc0000 - 0x000007feeefc4000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-string-l1-1-0.dll
+0x000007feeefb0000 - 0x000007feeefb3000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-heap-l1-1-0.dll
+0x000007feeed40000 - 0x000007feeed44000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-stdio-l1-1-0.dll
+0x000007feeed30000 - 0x000007feeed34000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-convert-l1-1-0.dll
+0x000007fee9a40000 - 0x000007fee9aea000 	C:\Program Files\Java\jdk-11.0.7\bin\msvcp140.dll
+0x000007feed350000 - 0x000007feed353000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-locale-l1-1-0.dll
+0x000007feed390000 - 0x000007feed395000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-math-l1-1-0.dll
+0x000007feeadb0000 - 0x000007feeadb5000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-multibyte-l1-1-0.dll
+0x000007feed370000 - 0x000007feed373000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-time-l1-1-0.dll
+0x000007feed380000 - 0x000007feed383000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+0x000007feed3b0000 - 0x000007feed3b3000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-environment-l1-1-0.dll
+0x000007feed3a0000 - 0x000007feed3a3000 	C:\Program Files\Java\jdk-11.0.7\bin\api-ms-win-crt-utility-l1-1-0.dll
+0x000007fec68e0000 - 0x000007fec7441000 	C:\Program Files\Java\jdk-11.0.7\bin\server\jvm.dll
+0x000007fef99a0000 - 0x000007fef99a9000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefddc0000 - 0x000007fefde0d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefdc00000 - 0x000007fefdc08000 	C:\Windows\system32\NSI.dll
+0x000007fefac20000 - 0x000007fefac5b000 	C:\Windows\system32\WINMM.dll
+0x00000000772b0000 - 0x00000000772b7000 	C:\Windows\system32\PSAPI.DLL
+0x000007feecf50000 - 0x000007feecf61000 	C:\Program Files\Java\jdk-11.0.7\bin\verify.dll
+0x000007fef8880000 - 0x000007fef89a5000 	C:\Windows\system32\DBGHELP.DLL
+0x000007feecf70000 - 0x000007feecf99000 	C:\Program Files\Java\jdk-11.0.7\bin\java.dll
+0x000007feed360000 - 0x000007feed36a000 	C:\Program Files\Java\jdk-11.0.7\bin\jimage.dll
+0x000007feecf30000 - 0x000007feecf46000 	C:\Program Files\Java\jdk-11.0.7\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-11.0.7\bin;C:\Windows\SYSTEM32;C:\Program Files\AVAST Software\Avast;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_e372d88f30fbb845;C:\Program Files\Java\jdk-11.0.7\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Xmx1024M -Xms1024M -Dclassworlds.conf=C:\Program Files\NetBeans-11.3\netbeans\java\maven\bin\m2.conf -Dmaven.home=C:\Program Files\NetBeans-11.3\netbeans\java\maven -Dmaven.multiModuleProjectDirectory=C:\Users\Vaggelis\Documents\NetBeansProjects\LiteratureAnalyticsThesis 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -Dexec.args=-classpath %classpath LiteratureAnalytics.ui.LiteratureAnalyticsUI -Dexec.executable=C:\Program Files\Java\jdk-11.0.7\bin\java.exe -Dmaven.ext.class.path=C:\Program Files\NetBeans-11.3\netbeans\java\maven-nblib\netbeans-eventspy.jar process-classes org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
+java_class_path (initial): C:\Program Files\NetBeans-11.3\netbeans\java\maven\boot\plexus-classworlds-2.5.2.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 1073741824                                {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1073741824                                {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-11.0.7
+JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8 -Xmx1024M -Xms1024M
+PATH=C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Git\cmd
+USERNAME=Vaggelis
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.24545)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 4000M (331M free)
+TotalPageFile size 8333M (AvailPageFile size 1021M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 56M, peak: 1078M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.7+8-LTS) for windows-amd64 JRE (11.0.7+8-LTS), built on Mar 12 2020 02:04:32 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.

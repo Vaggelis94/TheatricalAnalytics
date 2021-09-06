@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Χαρακτήρες Έργου</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id='target' ></div>
+        <script>
+        var target_target = document.getElementById('target');
+        var layout = {
+    title: 'Χαρακτήρες Έργου',
+    height: 600,
+    width: 1200,
+
+
+};
+
+var trace0 =
+    {
+        labels: ["ANOTHER LADY","MRS SOLNESS","ONE OF THE LADIES","MRS SOLNESS AND THE LADIES","HILDA","OTHER VOICES","A VOICE","DR HERDAL","SOLNESS","RAGNAR","KNUT BROVIK","BROVIK","KAIA"],
+        values: [1.0, 148.0, 1.0, 1.0, 544.0, 1.0, 1.0, 97.0, 708.0, 72.0, 1.0, 46.0, 52.0],
+        type: 'pie',
+        name: '',
+ }
+
+        var data = [ trace0];
+Plotly.newPlot(target_target, data, layout);            </script>
+
+</body>
+</html>

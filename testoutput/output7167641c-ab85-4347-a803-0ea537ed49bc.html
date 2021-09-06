@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>ΕΝΕΡΓΕΙΕΣ ΧΑΡΑΚΤΗΡΩΝ ΕΡΓΟΥ</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id='target' ></div>
+        <script>
+        var target_target = document.getElementById('target');
+        var layout = {
+    title: 'ΕΝΕΡΓΕΙΕΣ ΧΑΡΑΚΤΗΡΩΝ ΕΡΓΟΥ',
+    height: 600,
+    width: 1200,
+
+
+};
+
+var trace0 =
+{
+x: ["To Laertes","Scattering flowers.","To some Attendants.","To Guildenstern.","To Polonius.","Sleeps.","To the King.","Grappling with him.","Takes the skull.","Sings.","Pointing to Polonius.","Leaps into the grave.","Advancing.","Digs and sings.","Reads.","To Rosencrantz and Guildenstern","To Ophelia.","Behind.","Draws.","Points to his head and shoulder.","Beneath.","Gives a paper.","Aside.","Cries under the stage.","Within."],
+y: [1.0, 1.0, 1.0, 1.0, 3.0, 1.0, 1.0, 1.0, 1.0, 12.0, 1.0, 2.0, 1.0, 1.0, 5.0, 1.0, 2.0, 2.0, 1.0, 1.0, 3.0, 1.0, 10.0, 1.0, 7.0],
+showlegend: true,
+orientation: 'v',
+xaxis: 'x',
+yaxis: 'y',
+type: 'bar',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_target, data, layout);            </script>
+
+</body>
+</html>
