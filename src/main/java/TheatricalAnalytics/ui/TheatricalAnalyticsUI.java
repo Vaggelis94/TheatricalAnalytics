@@ -1,4 +1,4 @@
-package LiteratureAnalytics.ui;
+package TheatricalAnalytics.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -81,12 +81,12 @@ import tech.tablesaw.plotly.components.Layout;
 import tech.tablesaw.plotly.traces.BarTrace;
 import tech.tablesaw.plotly.traces.PieTrace;
 
-public class LiteratureAnalyticsUI extends javax.swing.JFrame {
+public class TheatricalAnalyticsUI extends javax.swing.JFrame {
 
     /**
      * Creates new form LiteratureAnalyticsUI
      */
-    public LiteratureAnalyticsUI() {
+    public TheatricalAnalyticsUI() {
         initComponents();
     }
 
@@ -143,7 +143,7 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
     private boolean clicked = false;
     private boolean sorted = false;
 
-    public LiteratureAnalyticsUI(File xmlfile, File numberedfile, XMLEditorKit xmlkit, JTextPane numbers, Document mydoc, NodeList mylist) {
+    public TheatricalAnalyticsUI(File xmlfile, File numberedfile, XMLEditorKit xmlkit, JTextPane numbers, Document mydoc, NodeList mylist) {
         this.myXMLFile = xmlfile;
         this.NumberedFile = numberedfile;
         this.xmlkit = xmlkit;
@@ -677,7 +677,7 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(SplitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PlayListPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(PlayListPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(FilteringPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3698,7 +3698,7 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
             //Load Play
             LoadPlay(urlFile);
         } catch (IOException ex) {
-            Logger.getLogger(LiteratureAnalyticsUI.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TheatricalAnalyticsUI.class.getName()).log(Level.SEVERE, null, ex);
         }
         //Scrape Play and Load XML
         ScrapeandLoadXML(urlFile);
@@ -3796,7 +3796,7 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
                 //Load Play
                 LoadPlayfromFile(myFile);
             } catch (IOException ex) {
-                Logger.getLogger(LiteratureAnalyticsUI.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(TheatricalAnalyticsUI.class.getName()).log(Level.SEVERE, null, ex);
             }
             //Scrape Play and Load XML
             ScrapeandLoadXMLfromFile(myFile);
@@ -7665,27 +7665,28 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger
-                    .getLogger(LiteratureAnalyticsUI.class
+                    .getLogger(TheatricalAnalyticsUI.class
                             .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
             java.util.logging.Logger
-                    .getLogger(LiteratureAnalyticsUI.class
+                    .getLogger(TheatricalAnalyticsUI.class
                             .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger
-                    .getLogger(LiteratureAnalyticsUI.class
+                    .getLogger(TheatricalAnalyticsUI.class
                             .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger
-                    .getLogger(LiteratureAnalyticsUI.class
+                    .getLogger(TheatricalAnalyticsUI.class
                             .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LiteratureAnalyticsUI().setVisible(true);
+                new TheatricalAnalyticsUI().setVisible(true);
             }
         });
     }
