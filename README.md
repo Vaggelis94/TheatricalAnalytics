@@ -1,4 +1,4 @@
-# LiteratureAnalytics
+# TheatricalAnalytics
 A desktop app for data analysis of theatrical plays.
 
 The app loads a list of plays from the online library Project Guternberg.
