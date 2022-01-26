@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Έργα">
+	<xs:complexType>
+	<xs:sequence>
+		<xs:element name="Έργο">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Τίτλος" type="xs:string"/>
+				<xs:element name="Συγγραφέας_ID" type="xs:integer"/>
+				<xs:element name="Ημερομηνία_Κυκλοφορίας" type="xs:string"/>
+				<xs:element name="Είδος" type="xs:string"/>
+				<xs:element name="URL" type="xs:string"/>
+				<xs:element name="Συγγραφέας">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Όνομα" type="xs:string" maxOccurs="1"/>
+							<xs:element name="Ημερομηνία_Γέννησης" type="xs:string" minOccurs="0"/>
+							<xs:element name="Βιογραφία" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:integer"/>	
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Περιεχόμενα" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Εισαγωγή" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Χαρακτήρες" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Πράξη" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>		
+						<xs:sequence>
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="Σκηνικές_Οδηγίες" type="xs:string" maxOccurs="unbounded"/>
+								<xs:element name="Χαρακτήρας" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:choice maxOccurs="unbounded">
+												<xs:element name="Όνομα" type="xs:string" maxOccurs="1"/>
+												<xs:element name="Σκηνικές_Οδηγίες" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+												<xs:element name="Λόγος" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+											</xs:choice>
+										</xs:sequence>
+										<xs:attribute name="id" type="xs:integer"/>	
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+							<xs:element name="Σκηνή" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:choice maxOccurs="unbounded">
+											<xs:element name="Σκηνικές_Οδηγίες" type="xs:string" maxOccurs="unbounded"/>
+											<xs:element name="Χαρακτήρας" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:choice maxOccurs="unbounded">
+															<xs:element name="Όνομα" type="xs:string" maxOccurs="1"/>
+															<xs:element name="Σκηνικές_Οδηγίες" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+															<xs:element name="Λόγος" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+														</xs:choice>
+													</xs:sequence>
+													<xs:attribute name="id" type="xs:integer"/>	
+												</xs:complexType>
+											</xs:element>
+										</xs:choice>
+									</xs:sequence>
+									<xs:attribute name="Νούμερο" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>		
+						<xs:attribute name="Νούμερο" type="xs:string"/>		
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:integer"/>	
+		</xs:complexType>
+		</xs:element>
+	</xs:sequence>
+	</xs:complexType>
+	</xs:element>
+</xs:schema>
