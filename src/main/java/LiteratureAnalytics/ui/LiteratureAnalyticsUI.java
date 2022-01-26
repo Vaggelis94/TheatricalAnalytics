@@ -3274,9 +3274,10 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
                     ex.printStackTrace();
                 }
                 writer.close();
+
                 //File to Save
                 File savedFile = exportfileChooser.getSelectedFile();
-                System.out.println("Saved as: " + savedFile.getAbsolutePath());
+                System.out.println("Saved as: " + savedFile.getName());
             }
         }
     }//GEN-LAST:event_SaveButtonActionPerformed
@@ -3291,7 +3292,7 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
             //Local Schema (xsd) example:
             File schemaFile = new File("C:\\Users\\ΔΗΜΗΤΡΗΣ\\Desktop\\plays.xsd");
             //Get XML from EditorPane to String
-            String validation = XMLEditorPane.getText();
+            String validation = XMLEditorPane.getText().trim().replaceFirst("^([\\W]+)<", "<");
 
             //Source xmlFile = new StreamSource(new File("C:\\Users\\ΔΗΜΗΤΡΗΣ\\Desktop\\Master Builder.xml"));
             //File f = myXMLFile;
@@ -3947,8 +3948,8 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
                     && !list.get(i).contains("Work and Play") && !list.get(i).contains("PlayBoy")) {
                 list.remove(list.get(i));
             }
-            */
-            
+             */
+
             if (list.get(i).equals("The Complete Works of William Shakespeare")) {
                 list.remove(list.get(i));
             }
@@ -3979,7 +3980,7 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
             if (list.get(i).equals("Hamlet")) {
                 list.remove(list.get(i));
             }
-            
+
         }
         return list;
     }
@@ -7618,53 +7619,31 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
         return counter;
     }
 
-    private String
-            parseDocument(String text
-            ) {
-        String processedText
-                = text;
-// Remove <meta> tags
-
-        processedText
-                = processedText
-                        .replaceAll("<meta([\\s\\S]+?)>", "");
+    private String parseDocument(String text) {
+        String processedText = text;
+        // Remove <meta> tags
+        processedText = processedText.replaceAll("<meta([\\s\\S]+?)>", "");
         // Replace unknown characters with End of guarded area
-        processedText
-                = processedText
-                        .replaceAll("�", "—");
-
+        processedText = processedText.replaceAll("�", "—");
         return processedText;
-
     }
 
-    public static String
-            wrap(java.lang.String str,
-                    int wrapLength,
-                    java.lang.String newLineStr,
-                    boolean wrapLongWords
-            ) {
+    public static String wrap(java.lang.String str, int wrapLength, java.lang.String newLineStr, boolean wrapLongWords) {
         return str;
-
     }
 
     //Load MySQL JDBC driver
     static {
         try {
-            Class
-                    .forName("com.mysql.jdbc.Driver");
-
+            Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException ex) {
-            System.err
-                    .println("Driver not found: " + ex
-                            .getMessage());
-
+            System.err.println("Driver not found: " + ex.getMessage());
         }
     }
 
     ;
 
     public static void main(String args[]) throws IOException {
-
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -7704,14 +7683,11 @@ public class LiteratureAnalyticsUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue
-                .invokeLater(new Runnable() {
-                    public void run() {
-                        new LiteratureAnalyticsUI().setVisible(true);
-
-                    }
-                });
-
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new LiteratureAnalyticsUI().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
