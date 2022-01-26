@@ -8,6 +8,8 @@ so that it includes more. (The first ones on top of the list should be working)
 Also some text in the plays requires cleaning so that the data can be as accurate as possible.
 The XML file on the right side is validated against an XSD file (plays.xsd) which is crucial for the validity and structure of the data.
 Once the XML file is valid, that data can be stored in a database which in turn will produce tables and load them on the lower part of the app.
-Finally the user can see statistics, numbers and graphs based on the data of their choice. 
+The plays that are stored in the databased are marked with green color. The user can also search and sort plays based on name and filter to show those
+inside the database. Finally, the user can see statistics, numbers and graphs based on the data of their choice. 
+
 
 
